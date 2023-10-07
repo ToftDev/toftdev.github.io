@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(path/to/your/gif.gif) no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1 {
+  font-family: 'Futura', sans-serif;
+  font-size: 4rem;
+  color: white;
+}
+
+#content {
+  background-color: #000;
+  color: #FFF;
+  padding: 50px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
