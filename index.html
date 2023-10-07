@@ -1,35 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Full Stack Programming Assistance</title>
-  <link rel="stylesheet" href="style.css">
+  <title>TOFTDEV</title>
   <style>
     body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      overflow-y: scroll;
+      background-color: black;
+    }
+    
+    .bg-container {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      background-color: black;
+    }
+    
+    .bg-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 1; /* Initial opacity of the gif */
+      transition: opacity 0.5s;
+    }
+    
+    .content {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .title {
+      font-family: "Futura", sans-serif;
+      font-size: 60px;
+      color: white;
     }
   </style>
 </head>
 <body>
-  <div id="header">
-    <h1>TOFTDEV</h1>
+  <div class="bg-container">
+    <img class="bg-image" src="your-gif.gif" alt="Background Gif">
+    <div class="content">
+      <h1 class="title">TOFTDEV</h1>
+    </div>
   </div>
-  <section id="content">
-    <h2>Lorem Ipsum</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </section>
-  <script>
-    window.addEventListener('scroll', function() {
-      var header = document.getElementById('header');
-      var scrolled = window.pageYOffset;
-      var fadeAmt = (scrolled / 300).toFixed(1); // Adjust the divisor to control the fade speed
   
-      if (scrollY >= 300) {
-        header.style.backgroundColor = 'rgba(0, 0, 0, ' + fadeAmt + ')';
-      } else {
-        header.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+  <script>
+    window.addEventListener("scroll", function() {
+      var scrolled = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      var opacity = 1 - scrolled;
+      document.querySelector(".bg-image").style.opacity = opacity;
+      
+      if (opacity <= 0) {
+        document.querySelector("h1.title").style.color = "white";
       }
     });
   </script>
