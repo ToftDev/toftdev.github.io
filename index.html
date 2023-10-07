@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack Programming Assistance</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>TOFTDEV</h1>
+  </div>
+  <section id="content">
+    <h2>Lorem Ipsum</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </section>
+  <script>
+    window.addEventListener('scroll', function() {
+      var header = document.getElementById('header');
+      var scrolled = window.pageYOffset;
+      var fadeAmt = (scrolled / 300).toFixed(1); // Adjust the divisor to control the fade speed
+  
+      if (scrollY >= 300) {
+        header.style.backgroundColor = 'rgba(0, 0, 0, ' + fadeAmt + ')';
+      } else {
+        header.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+      }
+    });
+  </script>
+</body>
+</html>
