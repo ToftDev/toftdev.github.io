@@ -1,3 +1,50 @@
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv='refresh' content='0; URL=http://toftdev.itch.io/'>
+    <style>
+        body {
+            background-color: #242429;
+            font-family: 'Futura', sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+        h1 {
+            color: white;
+        }
+        a {
+            text-decoration: underline;
+            color: white;
+        }
+        .iframe-container {
+            display: none;
+        }
+        .rounded-button {
+            background-color: #434445;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20%;
+            cursor: pointer;
+        }
+    </style>
 </head>
+<body>
+    <h1>&lt;ToftDev&gt;</h1>
+    <a href="https://youtube.com/@ToftDev" target="_blank">YouTube</a><br>
+    <a href="https://toftdev.itch.io" target="_blank">itch</a><br>
+    <button class="rounded-button" onclick="toggleIframe()">Chat</button>
+    <div class="iframe-container">
+        <iframe src="https://deadsimplechat.com/lzl2oNMEg" width="300px" height="500px"></iframe>
+    </div>
+    <script>
+        function toggleIframe() {
+            var iframeContainer = document.querySelector('.iframe-container');
+            if (iframeContainer.style.display === 'none') {
+                iframeContainer.style.display = 'block';
+            } else {
+                iframeContainer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
